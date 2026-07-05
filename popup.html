@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Highlight Saver</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div class="app-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+          <path d="M12 2l2.9 6.6L22 9.3l-5 4.9 1.2 7.1L12 17.8 5.8 21.3 7 14.2 2 9.3l7.1-.7z"/>
+        </svg>
+        <span>Highlight Saver</span>
+      </div>
+      <button id="clear-all-btn" class="text-btn" title="Delete all highlights">Clear all</button>
+    </header>
+
+    <div class="settings-row">
+      <input id="api-key-input" type="password" placeholder="OpenAI API key (for Summarize)" />
+      <button id="save-key-btn" class="text-btn">Save</button>
+    </div>
+
+    <div id="list" class="list"></div>
+
+    <div id="empty-state" class="empty-state" hidden>
+      <p>No highlights yet.</p>
+      <p class="empty-sub">Select text on any webpage and click "Save Highlight?" to get started.</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
